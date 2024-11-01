@@ -15,7 +15,7 @@ A key-value data store API built with Node.js, Express, Objection.js, and Postgr
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/kv-data-store.git
+    git clone https://github.com/ujjwal15718/Key-Value-Data-Store-Service.git
     cd kv-data-store
     ```
 
