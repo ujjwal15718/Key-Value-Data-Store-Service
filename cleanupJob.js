@@ -2,7 +2,7 @@ const cron = require('node-cron');
 const KVModel = require('./models/kvModel');
 
 // Schedule a cron job to run every minute
-cron.schedule('*/5 * * * *', async () => {
+cron.schedule('0 0 * * *', async () => {
     const now = new Date(); // Get the current date and time
     try {
         // Delete records where TTL has expired
