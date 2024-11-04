@@ -2,6 +2,20 @@
 
 A key-value data store API built with Node.js, Express, Objection.js, and PostgreSQL. This project provides endpoints for creating, retrieving, deleting, and batch creating key-value pairs, with JWT authentication and Swagger documentation.
 
+## Project Overview
+
+The KV Data Store is designed to efficiently manage key-value pairs with support for batch operations and time-to-live (TTL) functionality. It ensures secure access through JWT authentication and provides a simple interface for token generation using Swagger.
+
+
+## Technologies Used
+
+- Node.js
+- Express
+- Objection.js
+- PostgreSQL
+- JWT (JSON Web Tokens)
+- Swagger
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -18,6 +32,10 @@ A key-value data store API built with Node.js, Express, Objection.js, and Postgr
     git clone https://github.com/ujjwal15718/Key-Value-Data-Store-Service.git
     cd kv-data-store
     ```
+    Set up the database:
+    ```sh
+    # Create the database in postgres
+    createdb yourdbname
 
 2. Install dependencies:
     ```sh
@@ -25,6 +43,7 @@ A key-value data store API built with Node.js, Express, Objection.js, and Postgr
     ```
 
 3. Set up the database:
+
     ```sh
     npx knex migrate:latest
     ```
@@ -41,7 +60,8 @@ DB_HOST=localhost DB_USER=postgres DB_PASSWORD=yourpassword DB_NAME=yourdbname
 PORT=3000
 
 ## JWT secret
-JWT_SECRET=yourjwtsecret
+JWT_SECRET=yourjwtsecret  
+<!-- Take this variable in env and store any random values that will become the secret key-->
 
 ## Usage
 
