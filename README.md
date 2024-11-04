@@ -113,9 +113,21 @@ POST /api/batch/object
 ]
 
 
-## Swagger Documentation
-This project uses Swagger for generating JWT tokens. The Swagger documentation is available at http://localhost:3000/api-docs.
+## Running Tests
+This project includes automated tests to ensure the functionality of the API endpoints. The tests are written using Jest and Supertest.
 
-While the Swagger documentation is currently limited to token generation, this approach ensures that the core API endpoints remain lightweight and easy to manage. You can easily test and generate tokens using the Swagger interface, which can then be used to authenticate requests to the other endpoints.
+Running the Tests
+To run the tests, use the following command:
+npm test
 
+Test Cases
+The test cases cover the following scenarios:
 
+POST /api/object
+Should create a new key-value pair.
+GET /api/object/:key
+Should retrieve an existing key-value pair.
+Should return 404 for a non-existent key.
+DELETE /api/object/:key
+Should delete an existing key-value pair.
+Should return 404 for a non-existent key.

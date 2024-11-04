@@ -25,7 +25,7 @@ exports.generateToken = (req, res) => {
   }
 
   // Generate a token with the email as payload
-  const token = jwt.sign({ email }, config.jwtSecret, { expiresIn: "1h" });
+  const token = jwt.sign({ email }, config.jwtSecret, { expiresIn: "90d" });
 
   // Send the token as the response
   res.status(200).json({ token });
